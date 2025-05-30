@@ -1,4 +1,4 @@
-local basalt = require("basalt")
+local basalt = require("aame.lib.basalt")
 
 local lib = {}
 

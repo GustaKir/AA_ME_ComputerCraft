@@ -1,4 +1,4 @@
-local basalt = require("basalt")
+local basalt = require("aame.lib.basalt")
 local utils = require("utils")
 local addJobPopUp = require("addJobPopUp")
 local liveParamsPopUp = require("jobParams")

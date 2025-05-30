@@ -1,4 +1,4 @@
-# Advanced Storage System
+# AA_ME Storage System
 
 A ComputerCraft storage and crafting system that combines the best features of multiple systems:
 - ARTIST's robust inventory management
@@ -22,13 +22,19 @@ A ComputerCraft storage and crafting system that combines the best features of m
     - Mixing
     - Pressing
     - Crushing
+    - Compacting
+    - Haunting
+    - Milling
+    - Deploying
+    - Spout filling
   - Task monitoring and progress tracking
 
 - **User Interface**
-  - Simple but functional menu system
+  - Clean and intuitive menu system
   - Item search and filtering
   - Crafting queue management
   - Task monitoring
+  - System statistics
   - Item dumping
 
 ## Setup
@@ -43,12 +49,12 @@ A ComputerCraft storage and crafting system that combines the best features of m
    - Create mod machines
    - Input/output chests
 
-3. Edit `.artist.d/config.lua` to configure:
+3. Edit `config.json` to configure:
    - Storage chests
    - Create mod interfaces
    - Input/output locations
 
-4. Create recipes in `crafting/recipes.json` following this format:
+4. Create recipes in `data/recipes.json` following this format:
 ```json
 {
   "recipes": [
@@ -73,15 +79,27 @@ A ComputerCraft storage and crafting system that combines the best features of m
    - **Craft**: Request item crafting
    - **Dump**: Add items to storage
    - **Tasks**: Monitor crafting progress
+   - **Settings**: Configure system
+   - **Exit**: Shut down system
 
 ## Architecture
 
-The system is built on several components:
+The system is built with a modular design:
 
-- **ARTIST Core**: Handles inventory management and item tracking
-- **Crafting System**: Manages recipes and automation
-- **Create Integration**: Interfaces with Create mod machines
-- **User Interface**: Combines all components into a usable interface
+- **Core**
+  - `inventory.lua`: Item storage and tracking
+  - `crafting.lua`: Recipe management and automation
+  - `config.lua`: System configuration
+
+- **Peripherals**
+  - `manager.lua`: Peripheral detection and management
+  - `create.lua`: Create mod machine interfaces
+
+- **Interface**
+  - `main.lua`: User interface and menus
+
+- **Library**
+  - `log.lua`: Logging utilities
 
 ## Credits
 
@@ -89,4 +107,8 @@ This system combines code and concepts from:
 - ARTIST (A Rather Tremendous Item SysTem)
 - Inventory Manager
 - OCC Remote
-- Create Mod integration 
+- Create Mod integration
+
+## License
+
+MIT License - Feel free to use and modify as needed. 
